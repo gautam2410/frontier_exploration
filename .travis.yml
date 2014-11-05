@@ -26,6 +26,7 @@ before_script:
   - ln -s $CI_SOURCE_PATH .  
 
 script:
+  - cd ~/frontier_ws
   - catkin_make tests -j1 -DCATKIN_ENABLE_TESTING=ON
   - catkin_make run_tests -j1 -DCATKIN_ENABLE_TESTING=ON
   - catkin_make install -j1 -DCATKIN_ENABLE_TESTING=ON
